@@ -1,0 +1,36 @@
+/*
+	Estilos CSS do primeiro exemplo. Os intervalos de largura de tela (breakpoints) são:
+	xs - até 767px 
+	sm - entre 768px e 991px
+	md - entre 992px e 1199px
+	lg - maior que 1199px (1200px em diante)
+*/
+
+body, html { font-size: 16px; }
+
+@media only screen and (max-width: 767px) { 
+	h2 { font-size: 1.9rem; }
+	caption { font-size: 1.4rem; }
+	tr, td, th { font-size: 1rem }
+} 
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	h2 { font-size: 1.9rem; }  
+	h3 { font-size: 1rem; }  
+	caption { font-size: 1.3rem; }
+	tr, td, th { font-size: .9rem }
+	#botoesRadio { font-size: .8rem }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+	h2 { font-size: 2.2rem; } 
+	h3 { font-size: 1.2rem; } 
+	caption { font-size: 1.5rem; }
+	tr, td, th { font-size: 1.2rem } 
+}
+
+@media only screen and (min-width: 1200px) {
+	h2 { font-size: 2.6rem; }  
+	caption { font-size: 1.6rem; }
+	tr, td, th { font-size: 1.2rem }
+}

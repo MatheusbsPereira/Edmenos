@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- 
+		Esse layout é baseado no conteúdo do e-book "Unraveling Bootstrap 3.3 (With Over 100 Complete Samples)", de István Novák, disponível na Kindle Store da Amazon.com.br
+	 -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exemplo de layout com Bootstrap 3</title>
+
+	<!-- CDN do CSS do Bootstrap 3 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- CDN da jQuery 3.5.1. Tem que vir antes do javascript do Bootstrap 3 -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<!-- CDN do JavaScript do Bootstrap 3 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- 
+    	Para mudar a cor da navbar, entre no site https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
+	-->
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+
+	<!-- 
+		O arquivo de estilos collapse.css permite esconder o menu em telas maiores que o breakpoint xs (celular)
+ 	-->
+	<link rel="stylesheet" type="text/css" href="collapse.css"> 
+	<!-- 
+		Arquivo de estilos necessários para ajustar o layout
+ 	-->
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<!-- barra de navegação superior com cantos retos  -->
+  	<nav class="navbar navbar-default navbar-fixed-top">  
+  		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">
+			  		<img src="../imagens/YWLogo.png" width="111" height="82" style="margin-top:-24px;" />
+				</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navBar">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Experiência</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							Descubra um local para mergulhar
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Brasil</a></li>
+							<li><a href="#">Austrália</a></li>
+							<li><a href="#">Bahamas</a></li>
+							<li><a href="#">México</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Fale conosco</a></li>
+				</ul>
+				<!-- menu alinhado à direita -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+  		</div>
+  	</nav>   <!-- fim da barra de navegação -->
+
+  	<!-- Início do layout da página -->
+	<div class="container">
+		<!-- 
+			Imagem no topo da página, ocupando todo o espaço (12 colunas). A classe .img-responsive ajusta automaticamente a imagem em todos os breakpoints
+		-->
+	  	<div class="row">
+	  		<div class="col-md-12">
+	  			<img class="img-responsive" src="../imagens/banner 6.png" />
+	  		</div>
+	  	</div>
+	  	
+		<!-- 
+			Linha abaixo contém o carousel com 4 imagens. ATENÇÃO: as imagens devem ter largura maior que 1200px e ter EXATAMENTE a mesma largura e altura
+		-->
+		<div class="row">
+			<div class="col-md-12">
+				<!--  
+					CAROUSEL COM 4 IMAGENS
+				-->				
+				<div id="meuCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+					<ol class="carousel-indicators">
+						<li data-target="#meuCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#meuCarousel" data-slide-to="1"></li>
+						<li data-target="#meuCarousel" data-slide-to="2"></li>
+						<li data-target="#meuCarousel" data-slide-to="3"></li>
+					</ol>
+
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="../imagens/fundo1.png" />
+						</div>
+						<div class="item">
+							<img src="../imagens/fundo2.png" />
+						</div>
+						<div class="item">
+							<img src="../imagens/fundo3.png" />
+						</div>
+						<div class="item">
+							<img src="../imagens/fundo4.png" />
+						</div>
+					</div>
+					<a class="left carousel-control" href="#meuCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#meuCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+
+				</div>   <!-- fim div id="meuCarousel" -->
+				<!-- 
+					A div a seguir coloca um texto sobre o carousel. Esse texto só aparece nos tamanhos de tela md e lg. as classe ".hidden-xs" e "hidden-sm" escondem a div nos respectivos tamanhos. Ver classe ".textoCarousel" para entender o posicionamento da div. A classe ".text-center" é do bootstrap, e centraliza o texto dentro do espaço disponível (100%).
+				-->
+				<div class="textoCarousel hidden-xs hidden-sm">
+	                <div class="col-md-12 text-center">
+	                    <h1>Younderwater - o seu site de mergulho</h1>
+	                </div>
+	            </div>
+
+			</div>   <!-- fim div col-md-12 --> 
+		</div>  <!-- fim div row -->
+
+		<!--===================================================
+			Guias para exibir três conjuntos de tags em painéis 
+		    ===================================================-->
+		<div class="row padTop">    <!-- ver classe ".padTop" -->
+			<!-- 
+				A classe .col-sm-offset-1 cria uma coluna em branco, e a col-sm-10 cria um espaço de 10 colunas para conter as guias. Com essa combinação, soba uma coluna à direita, e conseguimos criar espaços vazios iguais dos dois lados da coluna com largura 10.
+			 -->
+			<div class="col-sm-offset-1 col-sm-10">
+				<!-- 
+					Cria uma <ul> para controlar cada painel (div interna da classe ".tab-content"). cada tag <a> está associada a uma div pelo id de cada uma. 
+				-->
+				<ul class="nav nav-tabs nav-justified">
+					<!-- 
+						classe .active indica que essa aba será ativada quando a página for carregada.
+						data-toggle="tab" -> "interruptor" que permite exibir o painel associado a uma aba quando a tag <a> for clicada.
+						href -> id da div que contém o painel a ser exibido.
+					 -->
+					<li class="active">
+						<a href="#item1" data-toggle="tab">Diário de Mergulhos</a>
+					</li>
+					<li>
+						<a href="#item2" data-toggle="tab">Dicas sobre locais</a>
+					</li>
+					<li>
+						<a href="#item3" data-toggle="tab">Busque Novos Locais</a>
+					</li>
+				</ul>
+				<!-- 
+					div class=tab-content contém os painéis associados à cada uma das guias (ver id das <div> e href das tags <a> acima)
+					classes:
+					.tab-pane -> formata o painel que será exibido pelo clique de uma guia
+					.fade e .in -> criam um efeito de transição quando saímos de um painel e entramos em outro
+					.active -> indica que esse painel será exibido quando a página for carregada. Só uma das <div> pode ter essa classe, o mesmo acontecendo com as <li> acima. 
+				-->
+				<div class="tab-content">
+					<div id="item1" class="tab-pane fade in active">
+						<h2 class="text-center">Diário de Mergulhos</h2>
+						<!--
+							Cria uma nova linha (row) dentro da coluna atual (col-sm-10). Com isso, podemos dividir o espaço disponível em duas áreas iguais, uma para texto e outra para imagem, cada um sendo uma coluna col-sm-6 
+						 -->
+						<div class="row">
+							<div class="col-sm-6">
+								<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="col-sm-6">
+								<p><img src="../imagens/Lionfish.jpg" class="img-responsive img-rounded"></p>
+							</div>
+						</div>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary btn-lg" role="button">Saiba Mais &raquo;</a>
+						</p>
+					</div>
+					<div id="item2" class="tab-pane fade">
+						<h2 class="text-center">Dicas sobre Locais</h2>
+						<!--
+							Cria uma nova linha (row) dentro da coluna atual (col-sm-10). Com isso, podemos dividir o espaço disponível em duas áreas iguais, uma para texto e outra para imagem, cada um sendo uma coluna col-sm-6 
+						 -->
+						<div class="row">
+							<div class="col-sm-6">
+								<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="col-sm-6">
+								<p><img src="../imagens/Me.jpg" class="img-responsive img-rounded"></p>
+							</div>
+						</div>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary btn-lg" role="button">Saiba Mais &raquo;</a>
+						</p>
+					</div>
+					<div id="item3" class="tab-pane fade">
+						<h2 class="text-center">Busque Novos Locais</h2>
+						<!--
+							Cria uma nova linha (row) dentro da coluna atual (col-sm-10). Com isso, podemos dividir o espaço disponível em duas áreas iguais, uma para texto e outra para imagem, cada um sendo uma coluna col-sm-6 
+						 -->
+						<div class="row">
+							<div class="col-sm-6">
+								<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="col-sm-6">
+								<p><img src="../imagens/Hawkfish.jpg" class="img-responsive img-rounded"></p>
+							</div>
+						</div>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary btn-lg" role="button">Saiba Mais &raquo;</a>
+						</p>
+					</div>
+				</div>   <!-- fim da div class="tab-content" -->
+			</div>   <!-- fim da div class="col-sm-offset-1 col-sn-10" -->
+		</div>    <!-- fim da div class=row -->
+
+		<!-- barra de navegação inferior com cantos retos e sem margem -->
+		<nav class="navbar navbar-default navbar-static-top sem-margem">
+			<p class="navbar-text">&copy;DeepDiver Plc, 2014</p>
+		</nav>
+
+	</div> <!-- fim div container -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CDN do CSS do Bootstrap 3 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Carrega o arquivvo de estilos da página, incluido media queries para texto -->
+	<link rel="stylesheet" type="text/css" href="estilos2.css">
+	
+	<!-- Carrega o arquivvo de estilos de tabela -->
+	<link rel="stylesheet" type="text/css" href="tabela.css">
+
+	<!-- CDN da jQuery 3.5.1. Tem que vir antes do javascript do Bootstrap 3 -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<!-- CDN do JavaScript do Bootstrap 3 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<!-- primeira linha: título -->
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>Bootstrap 3 - Tabelas responsivas</h2>
+			</div>
+		</div>      <!-- fim da primeira linha -->
+		<div class="row">
+			<!-- segunda linha: 12 colunas com <table> resposniva -->
+			<div class="col-sm-12">
+				<table class="table table-striped table-bordered table-hover">
+					<caption>Breakpoints do Bootstrap 3</caption>
+					<thead>
+						<th>Tipo de tela</th>
+						<th>Largura de tela</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Smartphones (xs)</td>
+							<td>Até 767px</td>
+						</tr>
+						<tr>
+							<td>Tablets (sm)</td>
+							<td>de 768px até 991px</td>
+						</tr>
+						<tr>
+							<td>Telas médias (md)</td>
+							<td>de 992px até 1199px</td>
+						</tr>
+						<tr>
+							<td>Telas grandes (lg)</td>
+							<td>maior que 1199px</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>   <!-- fim col-sm-12 -->    
+		</div>   <!-- fim da segunda linha -->
+	</div>   <!-- fim da div class="container" -->
+</body>
+</html>

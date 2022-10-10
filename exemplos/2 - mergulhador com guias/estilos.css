@@ -1,0 +1,91 @@
+ /*
+	Arquivo de estilos CSS. Para compreender os estilos, assistam à video aula "19-juntando tudo: segundo layout", que está disponível no moodle
+*/
+body, html { font-size: 16px; }
+
+body {
+	margin-top: 50px;		
+	background-image: url(../imagens/degrade.png);
+	background-repeat: repeat-x;
+	background-color: rgb(50,50,190);
+}
+
+h2, p {
+	font-family: arial;	
+}
+
+.container {
+	background-color: rgb(255,255,255);
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.sem-margem {
+	margin: 0px;
+}
+
+.textoCarousel {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	color: rgb(255,255,0);    /* amarelo */
+	bottom: auto;
+}
+
+/* 
+	Coloca 15px antes da div=row que contém as guias  
+*/
+.padTop {
+	padding-top: 15px;
+}
+
+/*
+	Estilos de texto dos painéis e guias não selecionadas. O estilo .nav-tabs>li>a significa: selecione a tag que contém a classe .nav-tabs, depois selecione as tags <li> que são filhas dessa tag. A seguir, selecione as tags <a> que são filhas das tags <li> selecionadas. O caracter ">" informa que somente as tags filhas devem ser selecionadas, não sendo selecionadas tags "netas" nem posteriores, caso existam. Isso garante que o estilo aplicado só vai afetar as tags escolhidas.
+*/ 
+
+.nav-tabs, .tab-content, .nav-tabs>li>a {
+	font-family: verdana;
+	color: #2F2472; 
+}
+
+.nav-tabs>li>a {
+	/*
+		Coloca em negrito o texto de todas as tags <a> que são fihas das tag <li>, que por sua vez são filhas da tag que contém a classe .nav-tabs
+	*/
+	font-weight: bold;
+}
+
+/*
+	.nav-tabs>li.active>a:focus - cor da guia após ser clicada (com foco)
+	.nav-tabs>li.active>a - cor da guia selecionada pela classe .active após a página ser carregada
+*/
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a {
+	background-color: #2F2472;
+	color: rgb(255,255,0);
+	font-family: verdana;
+}
+
+@media only screen and (max-width: 767px) { 
+	h2 { font-size: 1.8rem; }
+	p { font-size: 1.1rem; }
+	.nav-tabs>li>a { font-size: 1.2rem; }
+} 
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	h2 { font-size: 1.3rem; } 
+	p { font-size: .9rem; } 
+	.nav-tabs>li>a { font-size: .8rem; }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+	h2 { font-size: 1.8rem; }
+	p { font-size: 1.1rem; }  
+	.nav-tabs>li>a { font-size: 1rem; }
+}
+
+@media only screen and (min-width: 1200px) {
+	h2 { font-size: 2rem; } 
+	p { font-size: 1.3rem; } 
+	.nav-tabs>li>a { font-size: 1.2rem; } 
+}
