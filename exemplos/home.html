@@ -20,47 +20,9 @@
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 
-	<style type="text/css">
-		.navbar-brand {
-			padding: 20px 15px 15px;
-		}
-
-		body {
-			padding-top: 100px
-		}
-
-		.navbar-nav>li>a {
-			line-height: 70px;
-			font-size: 16px;
-		}
-
-		.navbar-brand img {
-			height: 60px;
-		}
-
-		@media (max-width: 768px) {
-			.navbar-brand>img {
-				height:55px;
-			}
-			.navbar-header{
-				height: 70px !important;
-			}
-			.alinha-navbar {
-				padding: 9px;
-				position: absolute;
-				left: 50%;
-				margin-left: -85px !important;
-				display: block;
-			}
-
-			body {
-				padding-top: 70px
-			}
-			.navbar button {
-				margin-top: 15px;
-			}
-		}
-	</style>
+	<!-- CSS da navbar -->
+	<link rel="stylesheet" href="style.css">
+	
 </head>
 
 <body>
@@ -75,8 +37,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="home.html"><img src="./imagens/logo_inicio-removebg-preview.png" alt=""
-						height="40px" draggable="false"></a>
+				<a class="navbar-brand alinha-navbar" href="home.html"><img src="./imagens/logo_inicio-removebg-preview.png"
+						alt="" draggable="false"></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -102,46 +64,40 @@
 							aria-expanded="false">Minha conta <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="carrinho.html">Carrinho</a></li>
-							<li><a href="meus_pedidos.html">Meus pedidos</a></li>
+							<li><a href="pedidos.html">Meus pedidos</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="rastrear_pedidos.html">Rastrear pedidos</a></li>
+							<li><a href="https://rastreamento.correios.com.br/app/index.php" target="_blank">Rastrear pedidos</a></li>
 						</ul>
 					</li>
 				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
+			</div>
+		</div>
 	</nav>
 
 	<div id="my-pics" class="carousel slide" data-ride="carousel" style="width: 100%; height: auto;">
 
-		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#my-pics" data-slide-to="0" class="active"></li>
 			<li data-target="#my-pics" data-slide-to="1"></li>
 			<li data-target="#my-pics" data-slide-to="2"></li>
 		</ol>
 
-		<!-- Content -->
 		<div class="carousel-inner" role="listbox">
 
-			<!-- Slide 1 -->
 			<div class="item active">
 				<img src="./imagens/carrossel_3.png" alt="Sunset over beach" style="width: 100%; height: auto;">
 			</div>
 
-			<!-- Slide 2 -->
 			<div class="item">
 				<img src="./imagens/carrossel_2.png" alt="Rob Roy Glacier" style="width: 100%; height: auto;">
 			</div>
 
-			<!-- Slide 3 -->
 			<div class="item">
 				<img src="./imagens/carrossel_1.png" alt="Longtail boats at Phi Phi" style="width: 100%; height: auto;">
 			</div>
 
 		</div>
 
-		<!-- Previous/Next controls -->
 		<a class="left carousel-control" href="#my-pics" role="button" data-slide="prev">
 			<span class="icon-prev" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
