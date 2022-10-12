@@ -1,80 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Edmenos</title>
+	<title>Loja ÉDMENOS</title>
 
 	<!-- CDN do CSS do Bootstrap 3 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- CDN da jQuery 3.5.1. Tem que vir antes do javascript do Bootstrap 3 -->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 	<!-- CDN do JavaScript do Bootstrap 3 -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+	<!-- CSS da navbar -->
+	<link rel="stylesheet" href="style.css">
 
 	<style type="text/css">
-		.container {
-			background-color: rgb(220,220,220);
-		
+		div p{
+			color: #000;
+			font-size: 21px;
+			margin: 25px;
+			text-align: justify;
 		}
-		body {
-			/*
-				A altura (height) da navbar é 50px. Como ela está fora da <div class="container">, é necessário criar uma margem-top de 50px para a tag <body>, caso contrário os 50px iniciais da página ficariam sob a navbar.
-			*/
-			margin-top: 50px;
-		}
-		.secundaria{
-			background-color: red;
-			
+		.menor{
+			font-size: 12px;
+			color: rgb(0, 0, 0);
 		}
 	</style>
-	<!-- 
-    	Para mudar a cor da navbar, entre no site https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
-  	-->
-	<link rel="stylesheet" type="text/css" href="navbar.css">
 </head>
+
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<a href="home.html" ><img src="imagens/logo_inicio-removebg-preview.png"class="navbar-brand " alt="Responsive image" ></a>
-				
-				<button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barraNav">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>			
+				</button>
+				<a class="navbar-brand alinha-navbar" href="home.html"><img src="./imagens/logo_inicio-removebg-preview.png"
+						alt="" draggable="false"></a>
 			</div>
-				<div id="barraNav" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav"> 
-						<li><a href="home.html">Home</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" 
-							href="#">Seções<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="secao_masculina.html">Masculina</a></li>
-								<li><a href="secao_feminina.html">Feminina</a></li>
-								<li><a href="secao_infantil.html">Infantil</a></li>
-							</ul>
-						</li>
-						<li><a href="sobre.html">Sobre</a></li>
-						<li><a href="privacidade.html">Privacidade</a></li>
-					</ul>
-				</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="false"><a href="home.html">Home <span class="sr-only"></span></a></li>
+					<li><a href="sobre.html">Sobre</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Coleções <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Masculina</a></li>
+							<li><a href="#">Feminina</a></li>
+							<li><a href="#">Unissex</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Infantil</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="privacidade.html">Privacidade</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Minha conta <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="carrinho.html">Carrinho</a></li>
+							<li><a href="pedidos.html">Meus pedidos</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="https://rastreamento.correios.com.br/app/index.php" target="_blank">Rastrear pedidos</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
-	<div class="container-fluid secundaria">
-		
-		
-	</div>
 	
-	<div class="container">
+	<nav class="container">
 		<div class="row">
+			<div class="col-md-12">
+				<h1 class="text-center">Lei Geral de Proteção de Dados Pessoais (LGPD)</h1>
+				<br>
+			</div>
 			
 		</div>
+		<div class="row">
+			<p class="xs-cor">A Lei Geral de Proteção de Dados Pessoais (LGPD), Lei n° 13.709/2018, foi promulgada para proteger os direitos fundamentais de liberdade e de privacidade e a livre formação da personalidade de cada indivíduo. A Lei fala sobre o tratamento de dados pessoais, dispostos em meio físico ou digital, feito por pessoa física ou jurídica de direito público ou privado, englobando um amplo conjunto de operações que podem ocorrer em meios manuais ou digitais.</p>
+		</div>
+		<div class="row">
+			<p class="xs-cor">No âmbito da LGPD, o tratamento dos dados pessoais pode ser realizado por dois agentes de tratamento, o Controlador e o Operador. Além deles, há a figura do Encarregado, que é a pessoa indicada pelo Controlador para atuar como canal de comunicação entre o Controlador, o Operador, os(as) titulares dos dados e a Autoridade Nacional de Proteção de Dados (ANPD).</p></div>
+		<div class="row">
+			<p class="xs-cor">Tema fundamental trabalhado pela Lei, o tratamento de dados diz respeito a qualquer atividade que utiliza um dado pessoal na execução da sua operação, como, por exemplo: coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração.</p>
+		</div>
+		<div class="row">
+			<p class="xs-cor">Antes de iniciar qualquer tipo de tratamento de dados pessoais, o agente deve se certificar que a finalidade da operação está registrada de forma clara e explícita e os propósitos especificados e informados ao(à) titular dos dados. No caso do setor público, a principal finalidade do tratamento está relacionada à execução de políticas públicas, devidamente previstas em lei, regulamentos ou respaldadas em contratos, convênios ou instrumentos semelhantes.
+		</p>
 	</div>
+		<div class="row">
+			<p class="xs-cor">O compartilhamento dentro da administração pública, no âmbito da execução de políticas públicas, é previsto na Lei e dispensa o consentimento específico. Contudo, o órgão que coleta deve informar com transparência qual dado será compartilhado e com quem. Do outro lado, o órgão que solicita receber o compartilhamento precisa justificar esse acesso com base na execução de uma política pública específica e claramente determinada, descrevendo o motivo da solicitação de acesso e o uso que será feito com os dados. Informações protegidas por sigilo seguem protegidas e sujeitas a normativos e regras específicas. Essas e outras questões fundamentais devem ser observadas pelos órgãos e entidades da administração federal no sentido de assegurar a conformidade do tratamento de dados pessoais de acordo com as hipóteses legais e princípios da LGPD.</p>
+		</div>
+		<div class="row">
+			<p class="xs-cor">A Lei estabelece uma estrutura legal de direitos dos(as) titulares de dados pessoais. Esses direitos devem ser garantidos durante toda a existência do tratamento dos dados pessoais realizado pelo órgão ou entidade. Para o exercício dos direitos dos(as) titulares, a LGPD prevê um conjunto de ferramentas que aprofundam obrigações de transparência ativa e passiva, e criam meios processuais para mobilizar a Administração Pública.</p>
+		</div>
+		<div class="row">
+			<p class="xs-cor">Documento base:  Guia de Boas Práticas para Implementação na Administração Pública Federal da Lei Geral de Proteção de Dados, documento elaborado pelos diferentes órgãos que compõem o Comitê Central de Governança de Dados e que contém orientações sobre as atribuições e atuação do Controlador, do Operador e do Encarregado, bem como da Autoridade Nacional de Proteção de Dados (ANPD) e versa, ainda, sobre os direitos fundamentais dos(as) cidadãos(ãs) titulares dos dados, aborda hipóteses de tratamento dos dados e sua realização, indica o ciclo de vida do tratamento dos dados pessoais e apresenta boas práticas em segurança da informação.</p>
+		</div>
+		<div class="row">
+			<p class="menor">A ÉDMENOS © não se responsabiliza com o cumprimento de nenhuma dessas leis</p>
+		</div>
+		
+		</div>
+		
+	</nav>
+
 </body>
+
 </html>
