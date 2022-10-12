@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Template Bootstrap</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+  	.container {
+  		border: solid 4px red;
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+  	}
+  	p { 
+      text-align: center;
+      font-size: 1.6em;
+      padding: 10px 0px;
+      margin: 0;
+      color: black;
+      font-weight: bold;
+      font-family: arial;
+    }
+
+    .md-cor {
+      border: solid 4px black;
+    }
+
+    .margem-bot { 
+    	margin-bottom: 15px;
+    }
+
+    .row {
+    	border: solid 4px blue;
+    	padding: 10px;
+    	margin-left: 15px;
+    	margin-right: 15px;
+    }
+
+  </style>
+  <script src="bootstrap/js/jquery-2.2.4.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<p></p>
+	<div class="container">
+		<div class="row margem-bot">
+			<div class="col-md-3"><p class="md-cor">3 colunas</p></div>
+			<div class="col-md-3"><p class="md-cor">3 colunas</p></div>
+			<div class="col-md-3"><p class="md-cor">3 colunas</p></div>
+			<div class="col-md-3"><p class="md-cor">3 colunas</p></div>
+		</div>
+		<div class="row margem-bot">
+			<div class="col-md-3"><p class="md-cor">3 colunas</p></div>
+			<div class="col-md-6"><p class="md-cor">6 colunas</p></div>
+			<div class="col-md-3"><p class="md-cor">3 colunas</p></div>
+		</div>
+		<div class="row margem-bot">
+			<div class="col-md-8"><p class="md-cor">8 colunas</p></div>
+			<div class="col-md-4"><p class="md-cor">4 colunas</p></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"><p class="md-cor">2 colunas</p></div>
+			<div class="col-md-10"><p class="md-cor">10 colunas</p></div>
+		</div>
+	</div>
+</body>
+</html>
